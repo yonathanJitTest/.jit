@@ -1,7 +1,1 @@
-applications:
-- api_domain: yo.com
-  application_name: yoyo
-  authentication_mode: non-authenticated
-  exclude_paths: []
-  target_url: https://yoy.yoy/yo.json
-  type: api
+
