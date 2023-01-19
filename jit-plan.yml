@@ -10,5 +10,3 @@ tags: []
 items:
   - name: Scan code for hard-coded secrets
     uses: jitsecurity-controls/jit-plans/items/code/item-secret-detection.yml@latest
-  - name: Scan your API for vulnerabilities
-    uses: jitsecurity-controls/jit-plans/items/runtime/item-api-security.yml@latest
