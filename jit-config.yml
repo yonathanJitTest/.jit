@@ -1,1 +1,12 @@
-
+applications:
+- api_domain: api.dev.jitdev.io
+  application_name: JitDev
+  authentication_mode: selenium
+  exclude_paths: []
+  login_page_url: https://platform.dev.jitdev.io/login
+  password: encrypted$AQICAHiKRGWn+EHruY/484rO7pJxzFGc/JSwAlIzIzxLWzk4OwGHdobC9Gfa4W+VIP5mS01+AAAAdjB0BgkqhkiG9w0BBwagZzBlAgEAMGAGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMJ5To+vcUBc+pU2i1AgEQgDN9WFym67N/3v5BJ5gfkXyMd1sEBePlf4miySiTZfusx+mEaaSLaZ7lsprUN9O2XDD7YRU=
+  password_css_selector: input[data-test-id='input-password']
+  target_url: https://platform.dev.jitdev.io
+  type: web
+  username: jit.cypress.e2e.dev@gmail.com
+  username_css_selector: input[data-test-id='input-email']
