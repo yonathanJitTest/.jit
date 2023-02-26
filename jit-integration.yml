@@ -1,0 +1,4 @@
+shortcut:
+  my-int:
+    auth:
+      api_token: ${{ secrets.my-secret }}
