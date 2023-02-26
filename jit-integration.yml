@@ -1,4 +1,4 @@
 shortcut:
-  my-int:
+  my-int1:
     auth:
       api_token: ${{ secrets.my-secret }}
