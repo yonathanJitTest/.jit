@@ -1,6 +1,6 @@
 applications:
 - api_domain: api.dev.jitdev.io
-  application_name: JitDev
+  application_name:  JitDev
   authentication_mode: selenium
   exclude_paths: []
   login_page_url: https://platform.dev.jitdev.io/login
