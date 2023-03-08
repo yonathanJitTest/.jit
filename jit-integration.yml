@@ -1,4 +1,0 @@
-shortcut:
-  hasus:
-    auth:
-      api_token:  ${{ secrets.my-secret1 }}
