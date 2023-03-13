@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: enrichment
-      uses: jitsecurity-controls/jit-github-action@v1.9
+      uses: jitsecurity-controls/jit-github-action@v2.0
       with:
         docker_user: jit-bot
         docker_password: ${{fromJSON(github.event.inputs.client_payload).payload.container_registry_token}}
@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: gitleaks
-      uses: jitsecurity-controls/jit-github-action@v1.9
+      uses: jitsecurity-controls/jit-github-action@v2.0
       with:
         docker_user: jit-bot
         docker_password: ${{fromJSON(github.event.inputs.client_payload).payload.container_registry_token}}
@@ -36,12 +36,57 @@ jobs:
         security_control_output_file: /tmp/report.json
         dispatch_type: workflow
 
+  software-component-analysis:
+    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'software-component-analysis'
+    runs-on: ubuntu-20.04
+    steps:
+    - name: osv-scanner
+      uses: jitsecurity-controls/jit-github-action@v2.0
+      with:
+        docker_user: jit-bot
+        docker_password: ${{fromJSON(github.event.inputs.client_payload).payload.container_registry_token}}
+        
+        security_control: ghcr.io/jitsecurity-controls/control-osv-scanner-alpine:latest
+        security_control_args: --recursive \${WORK_DIR:-.}
+        
+        dispatch_type: workflow
+
+  software-component-analysis-go:
+    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'software-component-analysis-go'
+    runs-on: ubuntu-20.04
+    steps:
+    - name: nancy
+      uses: jitsecurity-controls/jit-github-action@v2.0
+      with:
+        docker_user: jit-bot
+        docker_password: ${{fromJSON(github.event.inputs.client_payload).payload.container_registry_token}}
+        
+        security_control: ghcr.io/jitsecurity-controls/control-nancy-alpine:latest
+        security_control_args: 
+        
+        dispatch_type: workflow
+
+  software-component-analysis-js:
+    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'software-component-analysis-js'
+    runs-on: ubuntu-20.04
+    steps:
+    - name: npm-audit
+      uses: jitsecurity-controls/jit-github-action@v2.0
+      with:
+        docker_user: jit-bot
+        docker_password: ${{fromJSON(github.event.inputs.client_payload).payload.container_registry_token}}
+        
+        security_control: ghcr.io/jitsecurity-controls/control-npm-audit-slim:latest
+        security_control_args: audit --json --production
+        
+        dispatch_type: workflow
+
   static-code-analysis-go:
     if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'static-code-analysis-go'
     runs-on: ubuntu-20.04
     steps:
     - name: gosec
-      uses: jitsecurity-controls/jit-github-action@v1.9
+      uses: jitsecurity-controls/jit-github-action@v2.0
       with:
         docker_user: jit-bot
         docker_password: ${{fromJSON(github.event.inputs.client_payload).payload.container_registry_token}}
@@ -56,7 +101,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: semgrep
-      uses: jitsecurity-controls/jit-github-action@v1.9
+      uses: jitsecurity-controls/jit-github-action@v2.0
       with:
         docker_user: jit-bot
         docker_password: ${{fromJSON(github.event.inputs.client_payload).payload.container_registry_token}}
@@ -71,7 +116,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: semgrep
-      uses: jitsecurity-controls/jit-github-action@v1.9
+      uses: jitsecurity-controls/jit-github-action@v2.0
       with:
         docker_user: jit-bot
         docker_password: ${{fromJSON(github.event.inputs.client_payload).payload.container_registry_token}}
@@ -86,7 +131,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: bandit
-      uses: jitsecurity-controls/jit-github-action@v1.9
+      uses: jitsecurity-controls/jit-github-action@v2.0
       with:
         docker_user: jit-bot
         docker_password: ${{fromJSON(github.event.inputs.client_payload).payload.container_registry_token}}
@@ -101,7 +146,7 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
     - name: semgrep
-      uses: jitsecurity-controls/jit-github-action@v1.9
+      uses: jitsecurity-controls/jit-github-action@v2.0
       with:
         docker_user: jit-bot
         docker_password: ${{fromJSON(github.event.inputs.client_payload).payload.container_registry_token}}
