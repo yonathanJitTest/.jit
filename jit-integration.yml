@@ -1,5 +1,5 @@
 shortcut:
- shortcut-int:
+ shortcut-integration:
   auth:
    api_token: "${{ secrets.shortcut-api }}"
   preferences:
