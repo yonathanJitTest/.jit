@@ -1,6 +1,1 @@
-shortcut:
- shortcut-integration:
-  auth:
-   api_token: "${{ secrets.shortcut-api1 }}"
-  preferences:
-   project_id: 2
+
