@@ -3,4 +3,4 @@ shortcut:
   auth:
    api_token: "${{ secrets.shortcut-api1 }}"
   preferences:
-   project_id: 21
+   project_id: 2
