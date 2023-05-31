@@ -4,3 +4,8 @@ applications:
   exclude_paths: []
   target_url: https://platform.dev.jitdev.io
   type: web
+aws:
+- account_id: '452808376969'
+  regions:
+  - us-east-1
+  type: org
