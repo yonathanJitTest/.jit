@@ -1,6 +1,1 @@
-shortcut:
-  Engineering:
-    auth:
-      api_token: ${{ secrets.shortcut-token }}
-    preferences:
-      Project_id: "ProjectID"
+
