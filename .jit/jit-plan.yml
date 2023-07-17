@@ -25,4 +25,8 @@ items:
       IAM-003. Use strong password policy
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-iam-no-strong-policy.yml@latest
+  - name: |
+      CTL-004. Enable CloudTrail log file integrity validation
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-cloudtrail-integrity-validation.yml@latest
 
