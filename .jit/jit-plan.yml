@@ -14,6 +14,9 @@ items:
   - name: CTL-001. Configure CloudTrail in all AWS Accounts and in all Regions
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-cloudtrail-config.yml@latest
+  - name: CTL-004. Enable CloudTrail log file integrity validation
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-cloudtrail-integrity-validation.yml@latest
   - name: Scan your Dockerfiles for vulnerabilities
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-container-scan.yml@latest
@@ -39,6 +42,11 @@ items:
   - name: ARC-004. Remove access keys for the root user
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-root-account-keys.yml@latest
+  - name: >-
+      ARC-003. Enable multi-factor authentication (MFA) on the root user for all
+      AWS accounts
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-root-account-mfa.yml@latest
   - name: Scan infrastructure for runtime misconfigurations
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-runtime-misconfiguration-detection.yml@latest
@@ -56,15 +64,9 @@ items:
   - name: Scan your web application for vulnerabilities
     uses: >-
       jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
-  - name: |
-      CTL-004. Enable CloudTrail log file integrity validation
+  - name: Scan your code for vulnerabilities (SAST)
     uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-cloudtrail-integrity-validation.yml@latest
-  - name: >
-      ARC-003. Enable multi-factor authentication (MFA) on the root user for all
-      AWS accounts
-    uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-root-account-mfa.yml@latest
+      jitsecurity-controls/jit-plans/items/code/item-code-vulnerability.yml@latest
 override:
   workflows:
     runtime-misconfiguration-detection-cloudtrail-access-protection:
