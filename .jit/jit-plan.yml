@@ -51,6 +51,10 @@ items:
       ARC-004. Remove access keys for the root user
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-root-account-keys.yml@latest
+  - name: |
+      SDAT-002. Encrypt all sensitive data at rest
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-sensitive-data-encrypt-at-rest.yml@latest
 override:
   workflows:
     runtime-misconfiguration-detection-cloudtrail-access-protection:
