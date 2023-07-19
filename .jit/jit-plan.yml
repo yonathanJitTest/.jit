@@ -39,6 +39,9 @@ items:
   - name: Scan your infrastructure-as-code (IaC) for misconfigurations
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-iac-misconfiguration-detection.yml@latest
+  - name: Scan infrastructure for runtime misconfigurations
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-runtime-misconfiguration-detection.yml@latest
 override:
   workflows:
     runtime-misconfiguration-detection-cloudtrail-access-protection:
@@ -62,10 +65,3 @@ override:
             - name: Run Prowler For AWS
               uses: >-
                 899025839375.dkr.ecr.us-east-1.amazonaws.com/prowler:not-hardened-sc-18604-prowler-add-support-of-specific-checks
-    runtime-misconfiguration-detection:
-      jobs:
-        runtime-misconfig-detection-aws:
-          steps:
-            - name: Run Prowler For AWS
-              uses: >-
-                899025839375.dkr.ecr.us-east-1.amazonaws.com/prowler:not-hardened-main
