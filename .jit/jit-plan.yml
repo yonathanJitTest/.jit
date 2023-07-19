@@ -11,9 +11,6 @@ items:
   - name: CTL-003. Protect log storage from unintended access
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-cloudtrail-access-protection.yml@latest
-  - name: CTL-001. Configure CloudTrail in all AWS Accounts and in all Regions
-    uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-cloudtrail-config.yml@latest
   - name: CTL-004. Enable CloudTrail log file integrity validation
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-cloudtrail-integrity-validation.yml@latest
@@ -28,46 +25,42 @@ items:
   - name: Scan your infrastructure-as-code (IaC) for misconfigurations
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-iac-misconfiguration-detection.yml@latest
+  - name: IAM-002. Rotate credentials regularly
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-iam-creds-rotation.yml@latest
+  - name: >-
+      IAM-001. Enable multi-factor authentication for all Human Identities with
+      AWS access
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-iam-mfa.yml@latest
   - name: IAM-003. Use strong password policy
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-iam-no-strong-policy.yml@latest
   - name: ARC-001. Use root user only by exception
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-root-account-exception.yml@latest
-  - name: Scan code for hard-coded secrets
-    uses: jitsecurity-controls/jit-plans/items/code/item-secret-detection.yml@latest
-  - name: Scan your web application for vulnerabilities
-    uses: >-
-      jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
-  - name: >
-      IAM-001. Enable multi-factor authentication for all Human Identities with
-      AWS access
-    uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-iam-mfa.yml@latest
-  - name: |
-      ARC-004. Remove access keys for the root user
+  - name: ARC-004. Remove access keys for the root user
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-root-account-keys.yml@latest
-  - name: |
-      SDAT-002. Encrypt all sensitive data at rest
+  - name: Scan infrastructure for runtime misconfigurations
     uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-sensitive-data-encrypt-at-rest.yml@latest
-  - name: |
-      S3-002. Restrict access to S3 buckets that should not have public access
+      jitsecurity-controls/jit-plans/items/infrastructure/item-runtime-misconfiguration-detection.yml@latest
+  - name: S3-002. Restrict access to S3 buckets that should not have public access
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-s3-no-public-access.yml@latest
-  - name: >
+  - name: Scan code for hard-coded secrets
+    uses: jitsecurity-controls/jit-plans/items/code/item-secret-detection.yml@latest
+  - name: SDAT-002. Encrypt all sensitive data at rest
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-sensitive-data-encrypt-at-rest.yml@latest
+  - name: >-
       SDAT-003. Only use protocols with encryption when transmitting sensitive
       data outside of your VPC
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-sensitive-data-encrypt-out-vpc.yml@latest
-  - name: Scan infrastructure for runtime misconfigurations
+  - name: Scan your web application for vulnerabilities
     uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-runtime-misconfiguration-detection.yml@latest
-  - name: |
-      IAM-002. Rotate credentials regularly
-    uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-iam-creds-rotation.yml@latest
+      jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
 override:
   workflows:
     runtime-misconfiguration-detection-cloudtrail-access-protection:
