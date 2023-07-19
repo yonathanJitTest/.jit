@@ -62,10 +62,6 @@ items:
       CTL-003. Protect log storage from unintended access
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-cloudtrail-access-protection.yml@latest
-  - name: |
-      CTL-004. Enable CloudTrail log file integrity validation
-    uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-cloudtrail-integrity-validation.yml@latest
 override:
   workflows:
     runtime-misconfiguration-detection-cloudtrail-access-protection:
