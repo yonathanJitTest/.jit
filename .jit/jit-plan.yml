@@ -55,6 +55,10 @@ items:
       SDAT-002. Encrypt all sensitive data at rest
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-sensitive-data-encrypt-at-rest.yml@latest
+  - name: |
+      S3-002. Restrict access to S3 buckets that should not have public access
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-s3-no-public-access.yml@latest
 override:
   workflows:
     runtime-misconfiguration-detection-cloudtrail-access-protection:
