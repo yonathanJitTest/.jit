@@ -61,6 +61,9 @@ items:
       data outside of your VPC
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-sensitive-data-encrypt-out-vpc.yml@latest
+  - name: Scan infrastructure for runtime misconfigurations
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-runtime-misconfiguration-detection.yml@latest
 override:
   workflows:
     runtime-misconfiguration-detection-cloudtrail-access-protection:
