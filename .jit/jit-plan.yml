@@ -64,6 +64,10 @@ items:
   - name: Scan infrastructure for runtime misconfigurations
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-runtime-misconfiguration-detection.yml@latest
+  - name: |
+      IAM-002. Rotate credentials regularly
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-iam-creds-rotation.yml@latest
 override:
   workflows:
     runtime-misconfiguration-detection-cloudtrail-access-protection:
