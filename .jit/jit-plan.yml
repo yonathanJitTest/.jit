@@ -14,6 +14,9 @@ items:
   - name: CTL-001. Configure CloudTrail in all AWS Accounts and in all Regions
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-cloudtrail-config.yml@latest
+  - name: CTL-004. Enable CloudTrail log file integrity validation
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-cloudtrail-integrity-validation.yml@latest
   - name: Scan your code for vulnerabilities (SAST)
     uses: >-
       jitsecurity-controls/jit-plans/items/code/item-code-vulnerability.yml@latest
@@ -63,10 +66,9 @@ items:
   - name: Scan your web application for vulnerabilities
     uses: >-
       jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
-  - name: |
-      CTL-004. Enable CloudTrail log file integrity validation
+  - name: Scan infrastructure for runtime misconfigurations
     uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-cloudtrail-integrity-validation.yml@latest
+      jitsecurity-controls/jit-plans/items/infrastructure/item-runtime-misconfiguration-detection.yml@latest
 override:
   workflows:
     runtime-misconfiguration-detection-cloudtrail-access-protection:
