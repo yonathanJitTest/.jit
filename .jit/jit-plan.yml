@@ -47,9 +47,6 @@ items:
       AWS accounts
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-root-account-mfa.yml@latest
-  - name: Scan infrastructure for runtime misconfigurations
-    uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-runtime-misconfiguration-detection.yml@latest
   - name: S3-002. Restrict access to S3 buckets that should not have public access
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-s3-no-public-access.yml@latest
