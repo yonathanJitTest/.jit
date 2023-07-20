@@ -94,7 +94,7 @@ override:
                 args: >-
                   --checks
                   iam_password_policy_expires_passwords_within_90_days_or_less
-    runtime-misconfiguration-detection-cloudtrail-integrity-validation:
+    runtime-misconfiguration-detection:
       jobs:
         runtime-misconfig-detection-aws:
           steps:
