@@ -66,6 +66,10 @@ items:
   - name: Scan your web application for vulnerabilities
     uses: >-
       jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
+  - name: |
+      CTL-001. Configure CloudTrail in all AWS Accounts and in all Regions
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-cloudtrail-config.yml@latest
 override:
   workflows:
     runtime-misconfiguration-detection-cloudtrail-access-protection:
