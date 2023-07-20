@@ -76,9 +76,7 @@ override:
               uses: >-
                 899025839375.dkr.ecr.us-east-1.amazonaws.com/prowler:not-hardened-sc-18604-prowler-add-support-of-specific-checks-fix
               with:
-                args: >-
-                  --excluded-checks
-                  iam_password_policy_expires_passwords_within_90_days_or_less
+                args: --excluded-checks iam_password_policy_expires_passwords_within_90_days_or_less
     runtime-misconfiguration-detection-cloudtrail-config:
       jobs:
         runtime-misconfig-detection-aws:
