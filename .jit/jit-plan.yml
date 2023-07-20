@@ -47,9 +47,6 @@ items:
       AWS accounts
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-root-account-mfa.yml@latest
-  - name: Scan infrastructure for runtime misconfigurations
-    uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-runtime-misconfiguration-detection.yml@latest
   - name: S3-002. Restrict access to S3 buckets that should not have public access
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-s3-no-public-access.yml@latest
@@ -94,7 +91,7 @@ override:
                 args: >-
                   --checks
                   iam_password_policy_expires_passwords_within_90_days_or_less
-    runtime-misconfiguration-detection:
+    runtime-misconfiguration-detection-cloudtrail-integrity-validation:
       jobs:
         runtime-misconfig-detection-aws:
           steps:
