@@ -66,6 +66,10 @@ items:
   - name: Scan your web application for vulnerabilities
     uses: >-
       jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
+  - name: |
+      CTL-001. Configure CloudTrail in all AWS Accounts and in all Regions
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-cloudtrail-config.yml@latest
 override:
   workflows:
     runtime-misconfiguration-detection-cloudtrail-access-protection:
@@ -77,7 +81,8 @@ override:
                 899025839375.dkr.ecr.us-east-1.amazonaws.com/prowler:not-hardened-sc-18604-prowler-add-support-of-specific-checks-fix
               with:
                 args: >-
-                  --excluded-checks iam_password_policy_expires_passwords_within_90_days_or_less
+                  --excluded-checks
+                  iam_password_policy_expires_passwords_within_90_days_or_less
     runtime-misconfiguration-detection-cloudtrail-config:
       jobs:
         runtime-misconfig-detection-aws:
@@ -87,7 +92,8 @@ override:
                 899025839375.dkr.ecr.us-east-1.amazonaws.com/prowler:not-hardened-sc-18604-prowler-add-support-of-specific-checks-fix
               with:
                 args: >-
-                  --excluded-checks iam_password_policy_expires_passwords_within_90_days_or_less
+                  --excluded-checks
+                  iam_password_policy_expires_passwords_within_90_days_or_less
     runtime-misconfiguration-detection-cloudtrail-integrity-validation:
       jobs:
         runtime-misconfig-detection-aws:
@@ -97,4 +103,5 @@ override:
                 899025839375.dkr.ecr.us-east-1.amazonaws.com/prowler:not-hardened-sc-18604-prowler-add-support-of-specific-checks-fix
               with:
                 args: >-
-                  --excluded-checks iam_password_policy_expires_passwords_within_90_days_or_less
+                  --excluded-checks
+                  iam_password_policy_expires_passwords_within_90_days_or_less
