@@ -67,6 +67,10 @@ items:
       CTL-001. Configure CloudTrail in all AWS Accounts and in all Regions
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-cloudtrail-config.yml@latest
+  - name: |
+      CTL-003. Protect log storage from unintended access
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-cloudtrail-access-protection.yml@latest
 override:
   workflows:
     runtime-misconfiguration-detection:
