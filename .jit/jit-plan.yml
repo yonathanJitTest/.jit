@@ -67,6 +67,10 @@ items:
   - name: Scan infrastructure for runtime misconfigurations
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-runtime-misconfiguration-detection.yml@latest
+  - name: |
+      CTL-003. Protect log storage from unintended access
+    uses: >-
+      jitsecurity-controls/jit-plans/items/infrastructure/item-cloudtrail-access-protection.yml@latest
 override:
   workflows:
     runtime-misconfiguration-detection:
