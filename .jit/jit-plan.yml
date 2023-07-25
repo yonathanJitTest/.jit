@@ -48,4 +48,9 @@ items:
       CTL-004. Enable CloudTrail log file integrity validation
     uses: >-
       jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-integrity-validation.yml@latest
+  - name: >
+      IAM-001. Enable multi-factor authentication for all Human Identities with
+      AWS access
+    uses: >-
+      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-mfa.yml@latest
 
