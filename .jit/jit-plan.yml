@@ -51,4 +51,9 @@ items:
       ARC-001. Use root user only by exception
     uses: >-
       jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-exception.yml@latest
+  - name: >
+      ARC-003. Enable multi-factor authentication (MFA) on the root user for all
+      AWS accounts
+    uses: >-
+      jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-mfa.yml@latest
 
