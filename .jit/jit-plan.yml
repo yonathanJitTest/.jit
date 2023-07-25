@@ -66,26 +66,26 @@ items:
   - name: Scan infrastructure for runtime misconfigurations
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-runtime-misconfiguration-detection.yml@latest
-override:
-  workflows:
-    runtime-misconfiguration-detection:
-      jobs:
-        runtime-misconfig-detection-aws:
-          steps:
-            - name: Run Prowler For AWS
-              uses: >-
-                899025839375.dkr.ecr.us-east-1.amazonaws.com/prowler:latest
-    runtime-misconfiguration-detection-cloudtrail-access-protection:
-      jobs:
-        runtime-misconfig-detection-aws:
-          steps:
-            - name: Run Prowler For AWS
-              uses: >-
-                899025839375.dkr.ecr.us-east-1.amazonaws.com/prowler:latest
-    runtime-misconfiguration-detection-cloudtrail-config:
-      jobs:
-        runtime-misconfig-detection-aws:
-          steps:
-            - name: Run Prowler For AWS
-              uses: >-
-                899025839375.dkr.ecr.us-east-1.amazonaws.com/prowler:latest
+# override:
+#   workflows:
+#     runtime-misconfiguration-detection:
+#       jobs:
+#         runtime-misconfig-detection-aws:
+#           steps:
+#             - name: Run Prowler For AWS
+#               uses: >-
+#                 899025839375.dkr.ecr.us-east-1.amazonaws.com/prowler:latest
+#     runtime-misconfiguration-detection-cloudtrail-access-protection:
+#       jobs:
+#         runtime-misconfig-detection-aws:
+#           steps:
+#             - name: Run Prowler For AWS
+#               uses: >-
+#                 899025839375.dkr.ecr.us-east-1.amazonaws.com/prowler:latest
+#     runtime-misconfiguration-detection-cloudtrail-config:
+#       jobs:
+#         runtime-misconfig-detection-aws:
+#           steps:
+#             - name: Run Prowler For AWS
+#               uses: >-
+#                 899025839375.dkr.ecr.us-east-1.amazonaws.com/prowler:latest
