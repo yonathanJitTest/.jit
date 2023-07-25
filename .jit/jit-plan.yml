@@ -31,16 +31,8 @@ items:
   - name: Scan infrastructure for runtime misconfigurations
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-runtime-misconfiguration-detection.yml@latest
-  - name: S3-002. Restrict access to S3 buckets that should not have public access
-    uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-s3-no-public-access.yml@latest
   - name: Scan code for hard-coded secrets
     uses: jitsecurity-controls/jit-plans/items/code/item-secret-detection.yml@latest
-  - name: >-
-      SDAT-003. Only use protocols with encryption when transmitting sensitive
-      data outside of your VPC
-    uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-sensitive-data-encrypt-out-vpc.yml@latest
   - name: Scan your web application for vulnerabilities
     uses: >-
       jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
