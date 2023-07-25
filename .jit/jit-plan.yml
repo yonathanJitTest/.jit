@@ -36,14 +36,6 @@ items:
   - name: IAM-003. Use strong password policy
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-iam-no-strong-policy.yml@latest
-  - name: ARC-004. Remove access keys for the root user
-    uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-root-account-keys.yml@latest
-  - name: >-
-      ARC-003. Enable multi-factor authentication (MFA) on the root user for all
-      AWS accounts
-    uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-root-account-mfa.yml@latest
   - name: Scan infrastructure for runtime misconfigurations
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-runtime-misconfiguration-detection.yml@latest
