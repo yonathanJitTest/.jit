@@ -36,4 +36,8 @@ items:
       AWS accounts
     uses: >-
       jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-mfa.yml@latest
+  - name: |
+      ARC-004. Remove access keys for the root user
+    uses: >-
+      jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-keys.yml@latest
 
