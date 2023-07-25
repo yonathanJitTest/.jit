@@ -40,4 +40,8 @@ items:
       ARC-004. Remove access keys for the root user
     uses: >-
       jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-keys.yml@latest
+  - name: |
+      CTL-001. Configure CloudTrail in all AWS Accounts and in all Regions
+    uses: >-
+      jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-config.yml@latest
 
