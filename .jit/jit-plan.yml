@@ -25,9 +25,6 @@ items:
   - name: CTL-004. Enable CloudTrail log file integrity validation
     uses: >-
       jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-integrity-validation.yml@latest
-  - name: Scan your code for vulnerabilities (SAST)
-    uses: >-
-      jitsecurity-controls/jit-plans/items/code/item-code-vulnerability.yml@latest
   - name: Scan your Dockerfiles for vulnerabilities
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-container-scan.yml@latest
