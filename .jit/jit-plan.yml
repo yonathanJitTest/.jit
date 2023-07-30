@@ -1,5 +1,6 @@
 name: My plan
 level: beginner
+update_id: c7d89de3-5a34-4bf6-92b7-5c6edb267c3c
 author: Jit
 version: 0.1
 owners:
@@ -8,70 +9,55 @@ references:
   - https://www.jit.io
 tags: []
 items:
-  - name: >-
-      IAM-009. Ensure all credentials used by your applications are not
-      hard-coded
-    uses: >-
-      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-aws-ftr-secret-detection.yml@latest
+  - name: IAM-009. Ensure all credentials used by your applications are not hard-coded
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-aws-ftr-secret-detection.yml@latest
   - name: Foo bar
-    uses: >-
-      jitsecurity-controls/jit-plans/items/amazon_s3_bucket_access/item-backup-schedule.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/amazon_s3_bucket_access/item-backup-schedule.yml@latest
   - name: CTL-003. Protect log storage from unintended access
-    uses: >-
-      jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-access-protection.yml@latest
+
+    uses: jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-access-protection.yml@latest
   - name: CTL-001. Configure CloudTrail in all AWS Accounts and in all Regions
-    uses: >-
-      jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-config.yml@latest
+
+    uses: jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-config.yml@latest
   - name: CTL-004. Enable CloudTrail log file integrity validation
-    uses: >-
-      jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-integrity-validation.yml@latest
+
+    uses: jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-integrity-validation.yml@latest
+  - name: Scan your code for vulnerabilities (SAST)
+    uses: jitsecurity-controls/jit-plans/items/code/item-code-vulnerability.yml@latest
   - name: Scan your Dockerfiles for vulnerabilities
-    uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-container-scan.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/infrastructure/item-container-scan.yml@latest
+  - name: Scan your code dependencies for vulnerabilities (SCA)
+    uses: jitsecurity-controls/jit-plans/items/code/item-dependency-check.yml@latest
   - name: Scan your infrastructure-as-code (IaC) for misconfigurations
-    uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-iac-misconfiguration-detection.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/infrastructure/item-iac-misconfiguration-detection.yml@latest
   - name: IAM-002. Rotate credentials regularly
-    uses: >-
-      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-creds-rotation.yml@latest
-  - name: >-
-      IAM-001. Enable multi-factor authentication for all Human Identities with
-      AWS access
-    uses: >-
-      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-mfa.yml@latest
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-creds-rotation.yml@latest
+  - name: IAM-001. Enable multi-factor authentication for all Human Identities with AWS access
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-mfa.yml@latest
   - name: IAM-003. Use strong password policy
-    uses: >-
-      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-no-strong-policy.yml@latest
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-no-strong-policy.yml@latest
   - name: ARC-001. Use root user only by exception
-    uses: >-
-      jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-exception.yml@latest
+
+    uses: jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-exception.yml@latest
   - name: ARC-004. Remove access keys for the root user
-    uses: >-
-      jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-keys.yml@latest
-  - name: >-
-      ARC-003. Enable multi-factor authentication (MFA) on the root user for all
-      AWS accounts
-    uses: >-
-      jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-mfa.yml@latest
+
+    uses: jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-keys.yml@latest
+  - name: ARC-003. Enable multi-factor authentication (MFA) on the root user for all AWS accounts
+
+    uses: jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-mfa.yml@latest
   - name: Scan infrastructure for runtime misconfigurations
-    uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-runtime-misconfiguration-detection.yml@latest
-  - name: >-
-      S3-003. Implement monitoring and alerting to identify when S3 buckets
-      become public
-    uses: >-
-      jitsecurity-controls/jit-plans/items/amazon_s3_bucket_access/item-s3-monitoring-public.yml@latest
+    uses: jitsecurity-controls/jit-plans/items/infrastructure/item-runtime-misconfiguration-detection.yml@latest
+  - name: S3-003. Implement monitoring and alerting to identify when S3 buckets become public
+
+    uses: jitsecurity-controls/jit-plans/items/amazon_s3_bucket_access/item-s3-monitoring-public.yml@latest
   - name: S3-002. Restrict access to S3 buckets that should not have public access
-    uses: >-
-      jitsecurity-controls/jit-plans/items/amazon_s3_bucket_access/item-s3-no-public-access.yml@latest
+
+    uses: jitsecurity-controls/jit-plans/items/amazon_s3_bucket_access/item-s3-no-public-access.yml@latest
   - name: Scan code for hard-coded secrets
     uses: jitsecurity-controls/jit-plans/items/code/item-secret-detection.yml@latest
   - name: Scan your web application for vulnerabilities
-    uses: >-
-      jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
-  - name: Scan your code dependencies for vulnerabilities (SCA)
-    uses: jitsecurity-controls/jit-plans/items/code/item-dependency-check.yml@latest
-  - name: Scan your code for vulnerabilities (SAST)
-    uses: >-
-      jitsecurity-controls/jit-plans/items/code/item-code-vulnerability.yml@latest
-
+    uses: jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
