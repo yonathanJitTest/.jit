@@ -47,6 +47,9 @@ items:
   - name: IAM-003. Use strong password policy
     uses: >-
       jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-no-strong-policy.yml@latest
+  - name: HOST-001. Confirm your hosting model
+    uses: >-
+      jitsecurity-controls/jit-plans/items/partner_hosted/item-partner-hosting-model.yml@latest
   - name: ARC-001. Use root user only by exception
     uses: >-
       jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-exception.yml@latest
@@ -75,7 +78,7 @@ items:
     uses: >-
       jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
   - name: |
-      HOST-001. Confirm your hosting model
+      BAR-001. Configure automatic data backups
     uses: >-
-      jitsecurity-controls/jit-plans/items/partner_hosted/item-partner-hosting-model.yml@latest
+      jitsecurity-controls/jit-plans/items/backups_and_recovery/item-backup-schedule.yml@latest
 
