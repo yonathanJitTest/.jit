@@ -1,6 +1,6 @@
 item-backup-schedule:
   note: yes please
-  status: failed
+  status: n/a
 item-partner-hosting-model:
   note: Aluf
   status: passed
