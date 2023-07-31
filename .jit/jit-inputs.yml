@@ -6,7 +6,7 @@ item-backup-schedule:
   status: n/a
 item-partner-hosting-model:
   note: Aluf
-  status: passed
+  status: failed
 item-support-business:
   note: Thx
   status: passed
