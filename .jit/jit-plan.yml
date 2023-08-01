@@ -8,6 +8,9 @@ references:
   - https://www.jit.io
 tags: []
 items:
+  - name: ACOM-001. Configure AWS account contacts
+    uses: >-
+      jitsecurity-controls/jit-plans/items/communication_with_aws/item-account-communication.yml@latest
   - name: >-
       IAM-009. Ensure all credentials used by your applications are not
       hard-coded
@@ -47,9 +50,6 @@ items:
   - name: IAM-003. Use strong password policy
     uses: >-
       jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-no-strong-policy.yml@latest
-  - name: HOST-001. Confirm your hosting model
-    uses: >-
-      jitsecurity-controls/jit-plans/items/partner_hosted/item-partner-hosting-model.yml@latest
   - name: ARC-001. Use root user only by exception
     uses: >-
       jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-exception.yml@latest
@@ -74,20 +74,12 @@ items:
       jitsecurity-controls/jit-plans/items/amazon_s3_bucket_access/item-s3-no-public-access.yml@latest
   - name: Scan code for hard-coded secrets
     uses: jitsecurity-controls/jit-plans/items/code/item-secret-detection.yml@latest
-  - name: Scan your web application for vulnerabilities
-    uses: >-
-      jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
-  - name: |
-      BAR-001. Configure automatic data backups
-    uses: >-
-      jitsecurity-controls/jit-plans/items/backups_and_recovery/item-backup-schedule.yml@latest
-  - name: >
+  - name: >-
       SUP-001. Enable AWS Business Support (or greater) on all production AWS
       accounts
     uses: >-
       jitsecurity-controls/jit-plans/items/support_level/item-support-business.yml@latest
-  - name: |
-      ACOM-001. Configure AWS account contacts
+  - name: Scan your web application for vulnerabilities
     uses: >-
-      jitsecurity-controls/jit-plans/items/communication_with_aws/item-account-communication.yml@latest
+      jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
 
