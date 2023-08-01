@@ -8,8 +8,8 @@ item-backup-schedule:
   note: yes please
   status: n/a
 item-partner-hosting-model:
-  note: Aluf
-  status: failed
+  note: Aluf!
+  status: passed
 item-support-business:
   note: Thx
   status: passed
