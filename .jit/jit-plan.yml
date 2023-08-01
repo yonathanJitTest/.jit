@@ -11,6 +11,9 @@ items:
   - name: ACOM-001. Configure AWS account contacts
     uses: >-
       jitsecurity-controls/jit-plans/items/communication_with_aws/item-account-communication.yml@latest
+  - name: WAFR-001. Conduct periodic architecture reviews (minimum once every year)
+    uses: >-
+      jitsecurity-controls/jit-plans/items/architecture_review/item-arch-review.yml@latest
   - name: >-
       IAM-009. Ensure all credentials used by your applications are not
       hard-coded
@@ -83,7 +86,7 @@ items:
     uses: >-
       jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
   - name: |
-      WAFR-001. Conduct periodic architecture reviews (minimum once every year)
+      HOST-001. Confirm your hosting model
     uses: >-
-      jitsecurity-controls/jit-plans/items/architecture_review/item-arch-review.yml@latest
+      jitsecurity-controls/jit-plans/items/partner_hosted/item-partner-hosting-model.yml@latest
 
