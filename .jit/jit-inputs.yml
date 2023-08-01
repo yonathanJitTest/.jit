@@ -1,6 +1,9 @@
 item-account-communication:
   note: We don't have ...
   status: n/a
+item-arch-review:
+  note: YAY!!
+  status: passed
 item-backup-schedule:
   note: yes please
   status: n/a
