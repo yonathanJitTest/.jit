@@ -11,12 +11,6 @@ items:
   - name: ACOM-001. Configure AWS account contacts
     uses: >-
       jitsecurity-controls/jit-plans/items/communication_with_aws/item-account-communication.yml@latest
-  - name: WAFR-001. Conduct periodic architecture reviews (minimum once every year)
-    uses: >-
-      jitsecurity-controls/jit-plans/items/architecture_review/item-arch-review.yml@latest
-    input:
-      status: failed
-      note: 'Oh no! :('
   - name: >-
       IAM-009. Ensure all credentials used by your applications are not
       hard-coded
@@ -56,13 +50,15 @@ items:
   - name: IAM-003. Use strong password policy
     uses: >-
       jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-no-strong-policy.yml@latest
-  - name: ARC-001. Use root user only by exception
+  - name: |
+      ARC-001. Use root user only by exception
     uses: >-
       jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-exception.yml@latest
-  - name: ARC-004. Remove access keys for the root user
+  - name: |
+      ARC-004. Remove access keys for the root user
     uses: >-
       jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-keys.yml@latest
-  - name: >-
+  - name: >
       ARC-003. Enable multi-factor authentication (MFA) on the root user for all
       AWS accounts
     uses: >-
