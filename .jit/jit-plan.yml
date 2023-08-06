@@ -86,4 +86,11 @@ items:
     input:
       status: passed
       note: It's okay trust me 👹
+  - name: |
+      WAFR-001. Conduct periodic architecture reviews (minimum once every year)
+    uses: >-
+      jitsecurity-controls/jit-plans/items/architecture_review/item-arch-review.yml@latest
+    input:
+      status: passed
+      note: Meh
 
