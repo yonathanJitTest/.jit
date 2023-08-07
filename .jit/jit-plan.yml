@@ -102,4 +102,11 @@ items:
       data outside of your VPC
     uses: >-
       jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-encrypt-out-vpc.yml@latest
+  - name: |
+      SDAT-001. Identify sensitive data
+    uses: >-
+      jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-identify.yml@latest
+    input:
+      status: passed
+      note: Yessir
 
