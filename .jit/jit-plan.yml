@@ -116,4 +116,12 @@ items:
     input:
       status: n/a
       note: No such customers
+  - name: >
+      BAR-002. Periodically recover data to verify the integrity of your backup
+      process
+    uses: >-
+      jitsecurity-controls/jit-plans/items/backups_and_recovery/item-backup-recover-schedule.yml@latest
+    input:
+      status: passed
+      note: Okay boss
 
