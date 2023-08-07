@@ -109,4 +109,11 @@ items:
     input:
       status: passed
       note: Yessir
+  - name: |
+      CAA-006. Provide read-only access to external ID to customers
+    uses: >-
+      jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-external-id-ro.yml@latest
+    input:
+      status: n/a
+      note: No such customers
 
