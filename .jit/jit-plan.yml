@@ -61,12 +61,13 @@ items:
   - name: IAM-003. Use strong password policy
     uses: >-
       jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-no-strong-policy.yml@latest
-  - name: HOST-001. Confirm your hosting model
+  - name: |
+      HOST-001. Confirm your hosting model
     uses: >-
       jitsecurity-controls/jit-plans/items/partner_hosted/item-partner-hosting-model.yml@latest
     input:
-      note: blabla
       status: passed
+      note: blabla
   - name: ARC-001. Use root user only by exception
     uses: >-
       jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-exception.yml@latest
@@ -110,4 +111,11 @@ items:
     input:
       status: passed
       note: new one
+  - name: |
+      IAM-004. Create individual identities (no shared credentials)
+    uses: >-
+      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-no-shared-creds.yml@latest
+    input:
+      status: failed
+      note: Shuki
 
