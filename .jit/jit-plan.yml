@@ -53,9 +53,6 @@ items:
   - name: CAA-006. Provide read-only access to external ID to customers
     uses: >-
       jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-external-id-ro.yml@latest
-  - name: Scan your infrastructure-as-code (IaC) for misconfigurations
-    uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-iac-misconfiguration-detection.yml@latest
   - name: IAM-002. Rotate credentials regularly
     uses: >-
       jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-creds-rotation.yml@latest
