@@ -44,9 +44,6 @@ items:
   - name: CTL-004. Enable CloudTrail log file integrity validation
     uses: >-
       jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-integrity-validation.yml@latest
-  - name: Scan your Dockerfiles for vulnerabilities
-    uses: >-
-      jitsecurity-controls/jit-plans/items/infrastructure/item-container-scan.yml@latest
   - name: CAA-006. Provide read-only access to external ID to customers
     uses: >-
       jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-external-id-ro.yml@latest
