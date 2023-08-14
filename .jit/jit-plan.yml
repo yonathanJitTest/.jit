@@ -15,6 +15,14 @@ items:
     uses: >-
       jitsecurity-controls/jit-plans/items/architecture_review/item-arch-review.yml@latest
   - name: >-
+      WAFR-002. Review the AWS Shared Responsibility Models for Security and
+      Resiliency
+    uses: >-
+      jitsecurity-controls/jit-plans/items/architecture_review/item-arch-shared-responsibility.yml@latest
+    input:
+      note: new one
+      status: passed
+  - name: >-
       IAM-009. Ensure all credentials used by your applications are not
       hard-coded
     uses: >-
@@ -45,8 +53,6 @@ items:
   - name: CAA-006. Provide read-only access to external ID to customers
     uses: >-
       jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-external-id-ro.yml@latest
-  - name: Scan your code dependencies for vulnerabilities (SCA)
-    uses: jitsecurity-controls/jit-plans/items/code/item-dependency-check.yml@latest
   - name: Scan your infrastructure-as-code (IaC) for misconfigurations
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-iac-misconfiguration-detection.yml@latest
@@ -58,6 +64,12 @@ items:
       AWS access
     uses: >-
       jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-mfa.yml@latest
+  - name: IAM-004. Create individual identities (no shared credentials)
+    uses: >-
+      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-no-shared-creds.yml@latest
+    input:
+      note: Shuki
+      status: failed
   - name: IAM-003. Use strong password policy
     uses: >-
       jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-no-strong-policy.yml@latest
@@ -99,30 +111,15 @@ items:
   - name: SDAT-001. Identify sensitive data
     uses: >-
       jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-identify.yml@latest
-  - name: Scan your web application for vulnerabilities
-    uses: >-
-      jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
-  - name: >
-      WAFR-002. Review the AWS Shared Responsibility Models for Security and
-      Resiliency
-    uses: >-
-      jitsecurity-controls/jit-plans/items/architecture_review/item-arch-shared-responsibility.yml@latest
-    input:
-      status: passed
-      note: new one
-  - name: |
-      IAM-004. Create individual identities (no shared credentials)
-    uses: >-
-      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-no-shared-creds.yml@latest
-    input:
-      status: failed
-      note: Shuki
-  - name: >
+  - name: >-
       SUP-001. Enable AWS Business Support (or greater) on all production AWS
       accounts
     uses: >-
       jitsecurity-controls/jit-plans/items/support_level/item-support-business.yml@latest
     input:
-      status: passed
       note: what now?
+      status: passed
+  - name: Scan your web application for vulnerabilities
+    uses: >-
+      jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
 
