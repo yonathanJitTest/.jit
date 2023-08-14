@@ -32,9 +32,6 @@ items:
       process
     uses: >-
       jitsecurity-controls/jit-plans/items/backups_and_recovery/item-backup-recover-schedule.yml@latest
-  - name: Foo bar
-    uses: >-
-      jitsecurity-controls/jit-plans/items/amazon_s3_bucket_access/item-backup-schedule.yml@latest
   - name: CTL-003. Protect log storage from unintended access
     uses: >-
       jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-access-protection.yml@latest
