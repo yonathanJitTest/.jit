@@ -229,4 +229,11 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: |
+      RES-002. Establish a Recovery Time Objective (RTO)
+    uses: >-
+      jitsecurity-controls/jit-plans/items/resiliency/item-resiliency-rto.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
