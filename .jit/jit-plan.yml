@@ -20,9 +20,13 @@ items:
     input:
       note: 'yes'
       status: passed
-  - name: WAFR-001. Conduct periodic architecture reviews (minimum once every year)
+  - name: |
+      WAFR-001. Conduct periodic architecture reviews (minimum once every year)
     uses: >-
       jitsecurity-controls/jit-plans/items/architecture_review/item-arch-review.yml@latest
+    input:
+      status: passed
+      note: 'yes'
   - name: >-
       WAFR-002. Review the AWS Shared Responsibility Models for Security and
       Resiliency
