@@ -250,4 +250,12 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: >
+      RES-006. Architect your product to meet availability targets and uptime
+      service level agreements (SLAs)
+    uses: >-
+      jitsecurity-controls/jit-plans/items/resiliency/item-resiliency-sla.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
