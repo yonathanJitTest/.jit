@@ -211,4 +211,11 @@ items:
       NETSEC-002. Restrict resources in public subnets
     uses: >-
       jitsecurity-controls/jit-plans/items/network_security/item-netsec-public-subnets.yml@latest
+  - name: |
+      BAR-001. Configure automatic data backups
+    uses: >-
+      jitsecurity-controls/jit-plans/items/backups_and_recovery/item-backup-schedule.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
