@@ -163,4 +163,11 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: |
+      IAM-008. Audit identities quarterly
+    uses: >-
+      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-audit.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
