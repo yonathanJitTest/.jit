@@ -236,4 +236,11 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: |
+      RES-004. Resiliency Testing
+    uses: >-
+      jitsecurity-controls/jit-plans/items/resiliency/item-resiliency-testing.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
