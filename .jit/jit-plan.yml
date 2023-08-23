@@ -303,4 +303,11 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: |
+      CAA-005. Ensure all external IDs are unique
+    uses: >-
+      jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-external-id-unique.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
