@@ -258,4 +258,11 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: |
+      RES-007. Define a customer communication plan for outages
+    uses: >-
+      jitsecurity-controls/jit-plans/items/resiliency/item-resiliency-outages.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
