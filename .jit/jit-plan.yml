@@ -149,4 +149,11 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: |
+      IAM-006. Grant least privilege access
+    uses: >-
+      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-least-privilege.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
