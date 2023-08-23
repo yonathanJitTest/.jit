@@ -296,4 +296,11 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: |
+      CAA-004. Use a value you generate for the external ID
+    uses: >-
+      jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-value-generation.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
