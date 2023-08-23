@@ -40,11 +40,14 @@ items:
       hard-coded
     uses: >-
       jitsecurity-controls/jit-plans/items/identity_and_access_management/item-aws-ftr-secret-detection.yml@latest
-  - name: >-
+  - name: >
       BAR-002. Periodically recover data to verify the integrity of your backup
       process
     uses: >-
       jitsecurity-controls/jit-plans/items/backups_and_recovery/item-backup-recover-schedule.yml@latest
+    input:
+      status: passed
+      note: 'yes'
   - name: CTL-003. Protect log storage from unintended access
     uses: >-
       jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-access-protection.yml@latest
