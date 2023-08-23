@@ -184,4 +184,12 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: >
+      IAM-011. Encrypt all end user/customer credentials and hash passwords at
+      rest
+    uses: >-
+      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-encrypt-creds-at-rest.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
