@@ -218,4 +218,8 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: |
+      SDAT-002. Encrypt all sensitive data at rest
+    uses: >-
+      jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-encrypt-at-rest.yml@latest
 
