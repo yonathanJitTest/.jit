@@ -35,11 +35,6 @@ items:
     input:
       note: new one
       status: passed
-  - name: >-
-      IAM-009. Ensure all credentials used by your applications are not
-      hard-coded
-    uses: >-
-      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-aws-ftr-secret-detection.yml@latest
   - name: >
       BAR-002. Periodically recover data to verify the integrity of your backup
       process
