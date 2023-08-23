@@ -243,4 +243,11 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: |
+      RES-005. Communicate customer responsibilities for resilience
+    uses: >-
+      jitsecurity-controls/jit-plans/items/resiliency/item-resiliency-communication.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
