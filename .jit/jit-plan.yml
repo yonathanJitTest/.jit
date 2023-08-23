@@ -135,4 +135,12 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: >
+      CTL-002. Store logs in in a separate administrative domain with limited
+      access
+    uses: >-
+      jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-separate-account.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
