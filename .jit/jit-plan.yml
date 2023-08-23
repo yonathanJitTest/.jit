@@ -81,12 +81,13 @@ items:
       AWS access
     uses: >-
       jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-mfa.yml@latest
-  - name: IAM-004. Create individual identities (no shared credentials)
+  - name: |
+      IAM-004. Create individual identities (no shared credentials)
     uses: >-
       jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-no-shared-creds.yml@latest
     input:
+      status: passed
       note: Shuki
-      status: failed
   - name: IAM-003. Use strong password policy
     uses: >-
       jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-no-strong-policy.yml@latest
