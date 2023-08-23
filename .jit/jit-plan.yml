@@ -265,4 +265,12 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: >
+      S3-001. Review all Amazon S3 buckets to determine appropriate access
+      levels
+    uses: >-
+      jitsecurity-controls/jit-plans/items/amazon_s3_bucket_access/item-s3-review-access.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
