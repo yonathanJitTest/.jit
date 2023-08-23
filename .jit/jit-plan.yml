@@ -273,4 +273,11 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: |
+      CAA-001. Use cross-account roles to access customer accounts
+    uses: >-
+      jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-roles.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
