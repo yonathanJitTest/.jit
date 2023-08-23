@@ -65,9 +65,13 @@ items:
   - name: Scan your code for vulnerabilities (SAST)
     uses: >-
       jitsecurity-controls/jit-plans/items/code/item-code-vulnerability.yml@latest
-  - name: CAA-006. Provide read-only access to external ID to customers
+  - name: |
+      CAA-006. Provide read-only access to external ID to customers
     uses: >-
       jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-external-id-ro.yml@latest
+    input:
+      status: passed
+      note: 'yes'
   - name: Scan your infrastructure-as-code (IaC) for misconfigurations
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-iac-misconfiguration-detection.yml@latest
