@@ -207,4 +207,8 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: |
+      NETSEC-002. Restrict resources in public subnets
+    uses: >-
+      jitsecurity-controls/jit-plans/items/network_security/item-netsec-public-subnets.yml@latest
 
