@@ -192,4 +192,11 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: |
+      SECOPS-001. Perform vulnerability management
+    uses: >-
+      jitsecurity-controls/jit-plans/items/operational_security/item-secops-vulnerabiliy-mgt.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
