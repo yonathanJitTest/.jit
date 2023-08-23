@@ -288,4 +288,12 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: >
+      CAA-003. Deprecate any historical use of customer-provided IAM
+      credentials.
+    uses: >-
+      jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-deprecate-historical-creds.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
