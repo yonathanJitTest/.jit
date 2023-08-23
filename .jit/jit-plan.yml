@@ -199,4 +199,12 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: >
+      NETSEC-001. Implement the least permissive rules for all Amazon EC2
+      security groups
+    uses: >-
+      jitsecurity-controls/jit-plans/items/network_security/item-netsec-sg.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
