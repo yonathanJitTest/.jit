@@ -222,4 +222,11 @@ items:
       SDAT-002. Encrypt all sensitive data at rest
     uses: >-
       jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-encrypt-at-rest.yml@latest
+  - name: |
+      RES-001. Define a Recovery Point Objective (RPO)
+    uses: >-
+      jitsecurity-controls/jit-plans/items/resiliency/item-resiliency-rpo.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
