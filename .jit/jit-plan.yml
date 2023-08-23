@@ -310,4 +310,12 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: >
+      CAA-007. Provide guidance for creating cross-account roles with the
+      minimum required privileges
+    uses: >-
+      jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-automation.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
