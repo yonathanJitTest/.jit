@@ -156,4 +156,11 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: |
+      IAM-007. Manage access based on life cycle
+    uses: >-
+      jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-manage-access-lifecycle.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
