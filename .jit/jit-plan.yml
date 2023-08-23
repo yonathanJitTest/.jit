@@ -280,4 +280,12 @@ items:
     input:
       status: passed
       note: 'yes'
+  - name: >
+      CAA-002. Use an external ID with cross-account roles to access customer
+      accounts
+    uses: >-
+      jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-external-ids.yml@latest
+    input:
+      status: passed
+      note: 'yes'
 
