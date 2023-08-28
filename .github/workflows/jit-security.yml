@@ -11,6 +11,16 @@ permissions:
   id-token: write
 
 jobs:
+  docker-scan:
+    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'docker-scan' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-docker-scan'
+    runs-on: ubuntu-20.04
+    timeout-minutes: 20
+    steps:
+    - name: trivy
+      uses: jitsecurity-controls/jit-github-action@v4.0.1
+      with:
+        security_control: registry.jit.io/control-trivy-alpine:latest
+        
   enrich:
     if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'enrich' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-enrichment-code'
     runs-on: ubuntu-20.04
@@ -31,6 +41,17 @@ jobs:
       with:
         security_control: registry.jit.io/control-kics-alpine:latest
         security_control_output_file: /code/jit-report/results.json
+        
+  iac-misconfig-detection-kubernetes:
+    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'iac-misconfig-detection-kubernetes' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-kubernetes-iac-misconfiguration-detection'
+    runs-on: ubuntu-20.04
+    timeout-minutes: 20
+    steps:
+    - name: kubescape
+      uses: jitsecurity-controls/jit-github-action@v4.0.1
+      with:
+        security_control: registry.jit.io/control-kubescape-slim:latest
+        security_control_output_file: /code/results.json
         
   iac-misconfig-detection-pulumi:
     if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'iac-misconfig-detection-pulumi' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-iac-misconfiguration-detection'
@@ -75,4 +96,147 @@ jobs:
       with:
         security_control: registry.jit.io/control-gitleaks-alpine:latest
         security_control_output_file: /tmp/report.json
+        
+  software-component-analysis-go:
+    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'software-component-analysis-go' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-sca'
+    runs-on: ubuntu-20.04
+    timeout-minutes: 20
+    steps:
+    - name: nancy
+      uses: jitsecurity-controls/jit-github-action@v4.0.1
+      with:
+        security_control: registry.jit.io/control-nancy-alpine:latest
+        
+  software-component-analysis-js:
+    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'software-component-analysis-js' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-sca'
+    runs-on: ubuntu-20.04
+    timeout-minutes: 20
+    steps:
+    - name: npm-audit
+      uses: jitsecurity-controls/jit-github-action@v4.0.1
+      with:
+        security_control: registry.jit.io/control-npm-audit-slim:latest
+        security_control_output_file: /code/jit-report/enriched-audit-results.json
+        
+  software-component-analysis-php:
+    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'software-component-analysis-php' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-sca'
+    runs-on: ubuntu-20.04
+    timeout-minutes: 20
+    steps:
+    - name: osv-scanner
+      uses: jitsecurity-controls/jit-github-action@v4.0.1
+      with:
+        security_control: registry.jit.io/control-osv-scanner-alpine:latest
+        security_control_output_file: /code/jit-report/osv-scanner-results.json
+        
+  software-component-analysis-python:
+    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'software-component-analysis-python' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-sca'
+    runs-on: ubuntu-20.04
+    timeout-minutes: 20
+    steps:
+    - name: osv-scanner
+      uses: jitsecurity-controls/jit-github-action@v4.0.1
+      with:
+        security_control: registry.jit.io/control-osv-scanner-alpine:latest
+        security_control_output_file: /code/jit-report/enriched-osv-scanner-results.json
+        
+  static-code-analysis-csharp:
+    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'static-code-analysis-csharp' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-sast'
+    runs-on: ubuntu-20.04
+    timeout-minutes: 20
+    steps:
+    - name: semgrep
+      uses: jitsecurity-controls/jit-github-action@v4.0.1
+      with:
+        security_control: registry.jit.io/control-semgrep-alpine:latest
+        
+  static-code-analysis-go:
+    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'static-code-analysis-go' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-sast'
+    runs-on: ubuntu-20.04
+    timeout-minutes: 20
+    steps:
+    - name: gosec
+      uses: jitsecurity-controls/jit-github-action@v4.0.1
+      with:
+        security_control: registry.jit.io/control-gosec-alpine:latest
+        
+  static-code-analysis-java:
+    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'static-code-analysis-java' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-sast'
+    runs-on: ubuntu-20.04
+    timeout-minutes: 20
+    steps:
+    - name: semgrep
+      uses: jitsecurity-controls/jit-github-action@v4.0.1
+      with:
+        security_control: registry.jit.io/control-semgrep-alpine:latest
+        
+  static-code-analysis-js:
+    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'static-code-analysis-js' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-sast'
+    runs-on: ubuntu-20.04
+    timeout-minutes: 20
+    steps:
+    - name: semgrep
+      uses: jitsecurity-controls/jit-github-action@v4.0.1
+      with:
+        security_control: registry.jit.io/control-semgrep-alpine:latest
+        
+  static-code-analysis-kotlin:
+    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'static-code-analysis-kotlin' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-sast'
+    runs-on: ubuntu-20.04
+    timeout-minutes: 20
+    steps:
+    - name: semgrep
+      uses: jitsecurity-controls/jit-github-action@v4.0.1
+      with:
+        security_control: registry.jit.io/control-semgrep-alpine:latest
+        
+  static-code-analysis-php:
+    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'static-code-analysis-php' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-sast'
+    runs-on: ubuntu-20.04
+    timeout-minutes: 20
+    steps:
+    - name: semgrep
+      uses: jitsecurity-controls/jit-github-action@v4.0.1
+      with:
+        security_control: registry.jit.io/control-semgrep-alpine:latest
+        
+  static-code-analysis-python-semgrep:
+    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'static-code-analysis-python-semgrep' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-sast'
+    runs-on: ubuntu-20.04
+    timeout-minutes: 20
+    steps:
+    - name: semgrep
+      uses: jitsecurity-controls/jit-github-action@v4.0.1
+      with:
+        security_control: registry.jit.io/control-semgrep-alpine:latest
+        
+  static-code-analysis-rust:
+    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'static-code-analysis-rust' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-sast'
+    runs-on: ubuntu-20.04
+    timeout-minutes: 20
+    steps:
+    - name: semgrep
+      uses: jitsecurity-controls/jit-github-action@v4.0.1
+      with:
+        security_control: registry.jit.io/control-semgrep-alpine:latest
+        
+  static-code-analysis-scala:
+    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'static-code-analysis-scala' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-sast'
+    runs-on: ubuntu-20.04
+    timeout-minutes: 20
+    steps:
+    - name: semgrep
+      uses: jitsecurity-controls/jit-github-action@v4.0.1
+      with:
+        security_control: registry.jit.io/control-semgrep-alpine:latest
+        
+  static-code-analysis-swift:
+    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'static-code-analysis-swift' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-sast'
+    runs-on: ubuntu-20.04
+    timeout-minutes: 20
+    steps:
+    - name: semgrep
+      uses: jitsecurity-controls/jit-github-action@v4.0.1
+      with:
+        security_control: registry.jit.io/control-semgrep-alpine:latest
         
