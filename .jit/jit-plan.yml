@@ -328,4 +328,11 @@ items:
     input:
       status: passed
       note: asd
+  - name: |
+      Identify sensitive data
+    uses: >-
+      jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-identify.yml@latest
+    input:
+      status: failed
+      note: fasf
 
