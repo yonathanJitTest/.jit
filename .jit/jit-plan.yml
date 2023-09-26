@@ -209,12 +209,13 @@ items:
     input:
       note: 'yes'
       status: passed
-  - name: Confirm your hosting model
+  - name: |
+      Confirm your hosting model
     uses: >-
       jitsecurity-controls/jit-plans/items/partner_hosted/item-partner-hosting-model.yml@latest
     input:
-      note: bliblue
       status: passed
+      note: blue and yellow
   - name: >-
       RCVP-001. Establish a process to ensure that all required compliance
       standards are met
