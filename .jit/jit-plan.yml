@@ -305,12 +305,6 @@ items:
       data outside of your VPC
     uses: >-
       jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-encrypt-out-vpc.yml@latest
-  - name: SDAT-001. Identify sensitive data
-    uses: >-
-      jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-identify.yml@latest
-    input:
-      note: 'yes'
-      status: not_applicable
   - name: >-
       SUP-001. Enable AWS Business Support (or greater) on all production AWS
       accounts
