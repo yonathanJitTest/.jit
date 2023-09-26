@@ -77,14 +77,6 @@ items:
     uses: >-
       jitsecurity-controls/jit-plans/items/code/item-code-vulnerability.yml@latest
   - name: >-
-      CAA-007. Provide guidance for creating cross-account roles with the
-      minimum required privileges
-    uses: >-
-      jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-automation.yml@latest
-    input:
-      note: 'yes'
-      status: passed
-  - name: >-
       CAA-003. Deprecate any historical use of customer-provided IAM
       credentials.
     uses: >-
@@ -196,7 +188,8 @@ items:
   - name: Verify that MFA for your GitHub organization is enabled
     uses: >-
       jitsecurity-controls/jit-plans/items/third_party_app/item-mfa-scm.yml@latest
-  - name: NETSEC-002. Restrict resources in public subnets
+  - name: |
+      NETSEC-002. Restrict resources in public subnets
     uses: >-
       jitsecurity-controls/jit-plans/items/network_security/item-netsec-public-subnets.yml@latest
   - name: >-
@@ -303,10 +296,11 @@ items:
     input:
       note: 'yes'
       status: passed
-  - name: SDAT-002. Encrypt all sensitive data at rest
+  - name: |
+      SDAT-002. Encrypt all sensitive data at rest
     uses: >-
       jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-encrypt-at-rest.yml@latest
-  - name: >-
+  - name: >
       SDAT-003. Only use protocols with encryption when transmitting sensitive
       data outside of your VPC
     uses: >-
