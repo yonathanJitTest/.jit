@@ -8,11 +8,23 @@ references:
   - https://www.jit.io
 tags: []
 items:
+  - name: Configure AWS account contacts
+    uses: >-
+      jitsecurity-controls/jit-plans/items/communication_with_aws/item-account-communication.yml@latest
+    input:
+      note: '123'
+      status: failed
   - name: ACOM-002. Set account contact information
     uses: >-
       jitsecurity-controls/jit-plans/items/communication_with_aws/item-account-contacts-config.yml@latest
     input:
       note: 'yes'
+      status: passed
+  - name: Conduct periodic architecture reviews (minimum once every year)
+    uses: >-
+      jitsecurity-controls/jit-plans/items/architecture_review/item-arch-review.yml@latest
+    input:
+      note: '123'
       status: passed
   - name: >-
       WAFR-002. Review the AWS Shared Responsibility Models for Security and
@@ -197,13 +209,12 @@ items:
     input:
       note: 'yes'
       status: passed
-  - name: |
-      Confirm your hosting model
+  - name: Confirm your hosting model
     uses: >-
       jitsecurity-controls/jit-plans/items/partner_hosted/item-partner-hosting-model.yml@latest
     input:
-      status: passed
       note: blue and yellow
+      status: passed
   - name: >-
       RCVP-001. Establish a process to ensure that all required compliance
       standards are met
@@ -321,18 +332,7 @@ items:
   - name: Scan your web application for vulnerabilities
     uses: >-
       jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
-  - name: |
-      Conduct periodic architecture reviews (minimum once every year)
+  - name: Secure File Upload Architecture
     uses: >-
-      jitsecurity-controls/jit-plans/items/architecture_review/item-arch-review.yml@latest
-    input:
-      status: passed
-      note: '123'
-  - name: |
-      Configure AWS account contacts
-    uses: >-
-      jitsecurity-controls/jit-plans/items/communication_with_aws/item-account-communication.yml@latest
-    input:
-      status: failed
-      note: '123'
+      jitsecurity-controls/jit-plans/items/architecture_design_and_threat_modeling/item-secure-file-upload-architecture.yml@latest
 
