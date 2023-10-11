@@ -198,7 +198,8 @@ items:
   - name: Verify that MFA for your GitHub organization is enabled
     uses: >-
       jitsecurity-controls/jit-plans/items/third_party_app/item-mfa-scm.yml@latest
-  - name: NETSEC-002. Restrict resources in public subnets
+  - name: |
+      NETSEC-002. Restrict resources in public subnets
     uses: >-
       jitsecurity-controls/jit-plans/items/network_security/item-netsec-public-subnets.yml@latest
   - name: >-
@@ -307,10 +308,11 @@ items:
       status: passed
   - name: Scan code for hard-coded secrets
     uses: jitsecurity-controls/jit-plans/items/code/item-secret-detection.yml@latest
-  - name: SDAT-002. Encrypt all sensitive data at rest
+  - name: |
+      SDAT-002. Encrypt all sensitive data at rest
     uses: >-
       jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-encrypt-at-rest.yml@latest
-  - name: >-
+  - name: >
       SDAT-003. Only use protocols with encryption when transmitting sensitive
       data outside of your VPC
     uses: >-
@@ -332,4 +334,7 @@ items:
   - name: Scan your web application for vulnerabilities
     uses: >-
       jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
+  - name: Malicious Software Architecture
+    uses: >-
+      jitsecurity-controls/jit-plans/items/architecture_design_and_threat_modeling/item-malicious-software-architecture.yml@latest
 
