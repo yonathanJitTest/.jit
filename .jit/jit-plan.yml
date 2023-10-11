@@ -334,7 +334,4 @@ items:
   - name: Scan your web application for vulnerabilities
     uses: >-
       jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
-  - name: Malicious Software Architecture
-    uses: >-
-      jitsecurity-controls/jit-plans/items/architecture_design_and_threat_modeling/item-malicious-software-architecture.yml@latest
 
