@@ -210,6 +210,12 @@ items:
     input:
       note: 'yes'
       status: passed
+  - name: Time spent on FTR preperation
+    uses: >-
+      jitsecurity-controls/jit-plans/items/optional_level/item-optional-time-spent.yml@latest
+    input:
+      note: 25 hours
+      status: not_applicable
   - name: Confirm your hosting model
     uses: >-
       jitsecurity-controls/jit-plans/items/partner_hosted/item-partner-hosting-model.yml@latest
@@ -334,10 +340,10 @@ items:
     uses: >-
       jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
   - name: |
-      Time spent on FTR preperation
+      Collaboration on preperation of the FTR checklist
     uses: >-
-      jitsecurity-controls/jit-plans/items/optional_level/item-optional-time-spent.yml@latest
+      jitsecurity-controls/jit-plans/items/optional_level/item-optional-people-involved.yml@latest
     input:
-      status: not_applicable
-      note: 25 hours
+      status: passed
+      note: '2'
 
