@@ -73,6 +73,9 @@ items:
     input:
       note: 'yes'
       status: passed
+  - name: Scan your code for vulnerabilities (SAST)
+    uses: >-
+      jitsecurity-controls/jit-plans/items/code/item-code-vulnerability.yml@latest
   - name: Scan your Dockerfiles for vulnerabilities
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-container-scan.yml@latest
@@ -330,7 +333,11 @@ items:
   - name: Scan your web application for vulnerabilities
     uses: >-
       jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
-  - name: Scan your code for vulnerabilities (SAST)
+  - name: |
+      Time spent on FTR preperation
     uses: >-
-      jitsecurity-controls/jit-plans/items/code/item-code-vulnerability.yml@latest
+      jitsecurity-controls/jit-plans/items/optional_level/item-optional-time-spent.yml@latest
+    input:
+      status: not_applicable
+      note: 25 hours
 
