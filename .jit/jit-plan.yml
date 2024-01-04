@@ -334,6 +334,9 @@ items:
     input:
       note: fasf
       status: failed
+  - name: Generate a Software Bill of Materials (SBOM)
+    uses: >-
+      jitsecurity-controls/jit-plans/items/code/item-software-bill-of-materials.yml@latest
   - name: >-
       SUP-001. Enable AWS Business Support (or greater) on all production AWS
       accounts
@@ -345,7 +348,7 @@ items:
   - name: Scan your web application for vulnerabilities
     uses: >-
       jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
-  - name: Generate a Software Bill of Materials (SBOM)
+  - name: Scan Kubernetes configuration files
     uses: >-
-      jitsecurity-controls/jit-plans/items/code/item-software-bill-of-materials.yml@latest
+      jitsecurity-controls/jit-plans/items/infrastructure/item-iac-kubernetes.yml@latest
 
