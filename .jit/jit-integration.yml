@@ -10,7 +10,7 @@ jira:
       email: eliya@jit.io
       domain: eliya-test-99
     preferences:
-      project_id: 10001
+      project_id: 100012
       issue_type_id: 10001
       fields:
         customfield_10034:
