@@ -12,6 +12,6 @@ jira:
     preferences:
       project_id: 10001
       issue_type_id: 10001
-      # fields:
-      #   customfield_10034:
-      #     - value: "1"
+      fields:
+        customfield_10045:
+          - value: "Four"
