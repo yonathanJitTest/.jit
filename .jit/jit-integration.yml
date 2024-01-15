@@ -12,5 +12,3 @@ jira:
     preferences:
       project_id: 10001
       issue_type_id: 10001
-      fields:
-        project: 10001
