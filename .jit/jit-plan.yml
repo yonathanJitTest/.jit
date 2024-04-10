@@ -389,7 +389,4 @@ items:
   - name: Scan your web application for vulnerabilities
     uses: >-
       jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
-  - name: Remediation Plan (DCF-17)
-    uses: >-
-      jitsecurity-controls/jit-plans/items/code/item-drata-remediation-plan.yml@latest
 
