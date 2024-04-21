@@ -18,7 +18,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: trivy
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-trivy-alpine:latest
         
@@ -28,7 +28,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: enrichment
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-enrichment-slim:latest
         
@@ -38,7 +38,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: kics
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-kics-alpine:latest
         security_control_output_file: /code/jit-report/results.json
@@ -49,7 +49,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: kubescape
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-kubescape-slim:latest
         security_control_output_file: /code/results.json
@@ -60,7 +60,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: kics
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-kics-alpine:latest
         security_control_output_file: /code/jit-report/results.json
@@ -71,7 +71,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: kics
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-kics-alpine:latest
         security_control_output_file: /code/jit-report/results.json
@@ -82,7 +82,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: remediation-pr
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/open-remediation-pr-alpine:latest
         security_control_output_file: /opt/code/jit-report/results.json
@@ -93,7 +93,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: gitleaks
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-gitleaks-alpine:latest
         security_control_output_file: /tmp/report.json
@@ -104,7 +104,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: syft
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-syft-alpine:latest
         fail_if_cannot_checkout: false
@@ -115,7 +115,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: semgrep
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-semgrep-alpine:latest
         
@@ -125,7 +125,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: semgrep
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-semgrep-alpine:latest
         
@@ -135,7 +135,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: gosec
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-gosec-alpine:latest
         
@@ -145,7 +145,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: semgrep
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-semgrep-alpine:latest
         
@@ -155,7 +155,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: semgrep
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-semgrep-alpine:latest
         
@@ -165,7 +165,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: semgrep
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-semgrep-alpine:latest
         
@@ -175,7 +175,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: semgrep
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-semgrep-alpine:latest
         
@@ -185,7 +185,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: semgrep
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-semgrep-alpine:latest
         
@@ -195,7 +195,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: semgrep
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-semgrep-alpine:latest
         
@@ -205,7 +205,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: semgrep
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-semgrep-alpine:latest
         
@@ -215,7 +215,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: semgrep
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-semgrep-alpine:latest
         
@@ -225,7 +225,7 @@ jobs:
     timeout-minutes: 60
     steps:
     - name: semgrep
-      uses: jitsecurity-controls/jit-github-action@v4.2.1
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
       with:
         security_control: registry.jit.io/control-semgrep-alpine:latest
         
