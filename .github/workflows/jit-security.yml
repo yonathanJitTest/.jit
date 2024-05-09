@@ -12,6 +12,16 @@ permissions:
   id-token: write
 
 jobs:
+  analyze:
+    if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'analyze' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-jit-context-analysis'
+    runs-on: ubuntu-22.04
+    timeout-minutes: 60
+    steps:
+    - name: context-analysis
+      uses: jitsecurity-controls/jit-github-action@v4.2.2
+      with:
+        security_control: registry.jit.io/control-context-analysis-slim:latest
+        
   docker-scan:
     if: fromJSON(github.event.inputs.client_payload).payload.workflow_job_name == 'docker-scan' && fromJSON(github.event.inputs.client_payload).payload.workflow_slug == 'workflow-docker-scan'
     runs-on: ubuntu-22.04
