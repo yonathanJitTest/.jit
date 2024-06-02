@@ -1,304 +1,308 @@
-author: Jit
-items:
-- input:
-    note: '123'
-    requirements: null
-    status: failed
-  name: Configure AWS account contacts
-  uses: jitsecurity-controls/jit-plans/items/communication_with_aws/item-account-communication.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: ACOM-002. Set account contact information
-  uses: jitsecurity-controls/jit-plans/items/communication_with_aws/item-account-contacts-config.yml@latest
-- input:
-    note: '123'
-    requirements: null
-    status: passed
-  name: Conduct periodic architecture reviews (minimum once every year)
-  uses: jitsecurity-controls/jit-plans/items/architecture_review/item-arch-review.yml@latest
-- input:
-    note: new one
-    requirements: null
-    status: passed
-  name: WAFR-002. Review the AWS Shared Responsibility Models for Security and Resiliency
-  uses: jitsecurity-controls/jit-plans/items/architecture_review/item-arch-shared-responsibility.yml@latest
-- name: IAM-009. Ensure all credentials used by your applications are not hard-coded
-  uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-aws-ftr-secret-detection.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: BAR-002. Periodically recover data to verify the integrity of your backup
-    process
-  uses: jitsecurity-controls/jit-plans/items/backups_and_recovery/item-backup-recover-schedule.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: BAR-001. Configure automatic data backups
-  uses: jitsecurity-controls/jit-plans/items/backups_and_recovery/item-backup-schedule.yml@latest
-- name: Import AWS Security Hub Findings
-  uses: jitsecurity-controls/jit-plans/items/infrastructure/item-cloud-security-posture-management.yml@latest
-- name: CTL-003. Protect log storage from unintended access
-  uses: jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-access-protection.yml@latest
-- name: CTL-001. Configure CloudTrail in all AWS Accounts and in all Regions
-  uses: jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-config.yml@latest
-- name: CTL-004. Enable CloudTrail log file integrity validation
-  uses: jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-integrity-validation.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: CTL-002. Store logs in in a separate administrative domain with limited access
-  uses: jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-separate-account.yml@latest
-- name: Scan your code for vulnerabilities (SAST)
-  uses: jitsecurity-controls/jit-plans/items/code/item-code-vulnerability.yml@latest
-- name: Scan your Dockerfiles for vulnerabilities
-  uses: jitsecurity-controls/jit-plans/items/infrastructure/item-container-scan.yml@latest
-- input:
-    note: asd
-    requirements: null
-    status: passed
-  name: Provide guidance for creating cross-account roles with the minimum required
-    privileges
-  uses: jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-automation.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: CAA-003. Deprecate any historical use of customer-provided IAM credentials.
-  uses: jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-deprecate-historical-creds.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: CAA-006. Provide read-only access to external ID to customers
-  uses: jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-external-id-ro.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: CAA-005. Ensure all external IDs are unique
-  uses: jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-external-id-unique.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: CAA-002. Use an external ID with cross-account roles to access customer accounts
-  uses: jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-external-ids.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: CAA-001. Use cross-account roles to access customer accounts
-  uses: jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-roles.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: CAA-004. Use a value you generate for the external ID
-  uses: jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-value-generation.yml@latest
-- name: Scan Kubernetes configuration files
-  uses: jitsecurity-controls/jit-plans/items/infrastructure/item-iac-kubernetes.yml@latest
-- name: Scan your infrastructure-as-code (IaC) for misconfigurations
-  uses: jitsecurity-controls/jit-plans/items/infrastructure/item-iac-misconfiguration-detection.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: IAM-008. Audit identities quarterly
-  uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-audit.yml@latest
-- name: IAM-002. Rotate credentials regularly
-  uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-creds-rotation.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: IAM-011. Encrypt all end user/customer credentials and hash passwords at rest
-  uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-encrypt-creds-at-rest.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: IAM-006. Grant least privilege access
-  uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-least-privilege.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: IAM-007. Manage access based on life cycle
-  uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-manage-access-lifecycle.yml@latest
-- name: IAM-001. Enable multi-factor authentication for all Human Identities with
-    AWS access
-  uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-mfa.yml@latest
-- input:
-    note: Shuki
-    requirements: null
-    status: passed
-  name: IAM-004. Create individual identities (no shared credentials)
-  uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-no-shared-creds.yml@latest
-- name: IAM-003. Use strong password policy
-  uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-no-strong-policy.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: IAM-010. Store secrets securely
-  uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-store-secrets.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: IAM-012. Use temporary credentials
-  uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-temp-creds.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: IAM-005. Use IAM roles and its temporary security credentials to provide access
-    to third parties
-  uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-third-party.yml@latest
-- name: Verify that the users of your AWS accounts have enabled MFA
-  uses: jitsecurity-controls/jit-plans/items/infrastructure/item-mfa-cloud-providers.yml@latest
-- name: Verify that MFA for your GitHub organization is enabled
-  uses: jitsecurity-controls/jit-plans/items/third_party_app/item-mfa-scm.yml@latest
-- name: NETSEC-002. Restrict resources in public subnets
-  uses: jitsecurity-controls/jit-plans/items/network_security/item-netsec-public-subnets.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: NETSEC-001. Implement the least permissive rules for all Amazon EC2 security
-    groups
-  uses: jitsecurity-controls/jit-plans/items/network_security/item-netsec-sg.yml@latest
-- input:
-    note: '2'
-    requirements: null
-    status: passed
-  name: Collaboration on preperation of the FTR checklist
-  uses: jitsecurity-controls/jit-plans/items/optional_level/item-optional-people-involved.yml@latest
-- input:
-    note: 25 hours
-    requirements: null
-    status: not_applicable
-  name: Time spent on FTR preperation
-  uses: jitsecurity-controls/jit-plans/items/optional_level/item-optional-time-spent.yml@latest
-- input:
-    note: blue and yellow
-    requirements: null
-    status: passed
-  name: Confirm your hosting model
-  uses: jitsecurity-controls/jit-plans/items/partner_hosted/item-partner-hosting-model.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: RCVP-001. Establish a process to ensure that all required compliance standards
-    are met
-  uses: jitsecurity-controls/jit-plans/items/regulatory_compliance_validation_process/item-regulatory-compliance-process.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: RES-005. Communicate customer responsibilities for resilience
-  uses: jitsecurity-controls/jit-plans/items/resiliency/item-resiliency-communication.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: RES-007. Define a customer communication plan for outages
-  uses: jitsecurity-controls/jit-plans/items/resiliency/item-resiliency-outages.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: RES-001. Define a Recovery Point Objective (RPO)
-  uses: jitsecurity-controls/jit-plans/items/resiliency/item-resiliency-rpo.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: RES-002. Establish a Recovery Time Objective (RTO)
-  uses: jitsecurity-controls/jit-plans/items/resiliency/item-resiliency-rto.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: RES-006. Architect your product to meet availability targets and uptime service
-    level agreements (SLAs)
-  uses: jitsecurity-controls/jit-plans/items/resiliency/item-resiliency-sla.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: RES-004. Resiliency Testing
-  uses: jitsecurity-controls/jit-plans/items/resiliency/item-resiliency-testing.yml@latest
-- name: ARC-001. Use root user only by exception
-  uses: jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-exception.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: ARC-005. Create an incident response (IR) runbook for root account credential
-    misuse
-  uses: jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-ir.yml@latest
-- name: ARC-004. Remove access keys for the root user
-  uses: jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-keys.yml@latest
-- name: ARC-003. Enable multi-factor authentication (MFA) on the root user for all
-    AWS accounts
-  uses: jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-mfa.yml@latest
-- name: Scan infrastructure for runtime misconfigurations
-  uses: jitsecurity-controls/jit-plans/items/infrastructure/item-runtime-misconfiguration-detection.yml@latest
-- name: S3-003. Implement monitoring and alerting to identify when S3 buckets become
-    public
-  uses: jitsecurity-controls/jit-plans/items/amazon_s3_bucket_access/item-s3-monitoring-public.yml@latest
-- name: S3-002. Restrict access to S3 buckets that should not have public access
-  uses: jitsecurity-controls/jit-plans/items/amazon_s3_bucket_access/item-s3-no-public-access.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: S3-001. Review all Amazon S3 buckets to determine appropriate access levels
-  uses: jitsecurity-controls/jit-plans/items/amazon_s3_bucket_access/item-s3-review-access.yml@latest
-- input:
-    note: 'yes'
-    requirements: null
-    status: passed
-  name: SECOPS-001. Perform vulnerability management
-  uses: jitsecurity-controls/jit-plans/items/operational_security/item-secops-vulnerabiliy-mgt.yml@latest
-- name: Scan code for hard-coded secrets
-  uses: jitsecurity-controls/jit-plans/items/code/item-secret-detection.yml@latest
-- name: SDAT-002. Encrypt all sensitive data at rest
-  uses: jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-encrypt-at-rest.yml@latest
-- name: SDAT-003. Only use protocols with encryption when transmitting sensitive data
-    outside of your VPC
-  uses: jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-encrypt-out-vpc.yml@latest
-- input:
-    note: fasf
-    requirements: null
-    status: failed
-  name: Identify sensitive data
-  uses: jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-identify.yml@latest
-- name: Generate a Software Bill of Materials (SBOM)
-  uses: jitsecurity-controls/jit-plans/items/code/item-software-bill-of-materials.yml@latest
-- input:
-    note: what now?
-    requirements: null
-    status: passed
-  name: SUP-001. Enable AWS Business Support (or greater) on all production AWS accounts
-  uses: jitsecurity-controls/jit-plans/items/support_level/item-support-business.yml@latest
-- name: Scan your web application for vulnerabilities
-  uses: jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
-- name: Analyze for Jit Context
-  uses: jitsecurity-controls/jit-plans/items/jit-context/item-jit-context-analysis.yml@latest
-level: beginner
 name: My plan
+level: beginner
+update_id: 8aa7bca1-34bf-43d6-bd10-1eb7ef46ac4b
+author: Jit
+version: 0.1
 owners:
   default: null
 references:
-- https://www.jit.io
+  - https://www.jit.io
 tags: []
-version: 0.1
+items:
+  - name: Configure AWS account contacts
 
+    uses: jitsecurity-controls/jit-plans/items/communication_with_aws/item-account-communication.yml@latest
+    input:
+      note: '123'
+      status: failed
+  - name: ACOM-002. Set account contact information
+
+    uses: jitsecurity-controls/jit-plans/items/communication_with_aws/item-account-contacts-config.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: Conduct periodic architecture reviews (minimum once every year)
+
+    uses: jitsecurity-controls/jit-plans/items/architecture_review/item-arch-review.yml@latest
+    input:
+      note: '123'
+      status: passed
+  - name: WAFR-002. Review the AWS Shared Responsibility Models for Security and Resiliency
+
+    uses: jitsecurity-controls/jit-plans/items/architecture_review/item-arch-shared-responsibility.yml@latest
+    input:
+      note: new one
+      status: passed
+  - name: IAM-009. Ensure all credentials used by your applications are not hard-coded
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-aws-ftr-secret-detection.yml@latest
+  - name: BAR-002. Periodically recover data to verify the integrity of your backup process
+
+    uses: jitsecurity-controls/jit-plans/items/backups_and_recovery/item-backup-recover-schedule.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: BAR-001. Configure automatic data backups
+
+    uses: jitsecurity-controls/jit-plans/items/backups_and_recovery/item-backup-schedule.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: Import AWS Security Hub Findings
+    uses: jitsecurity-controls/jit-plans/items/infrastructure/item-cloud-security-posture-management.yml@latest
+  - name: CTL-003. Protect log storage from unintended access
+
+    uses: jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-access-protection.yml@latest
+  - name: CTL-001. Configure CloudTrail in all AWS Accounts and in all Regions
+
+    uses: jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-config.yml@latest
+  - name: CTL-004. Enable CloudTrail log file integrity validation
+
+    uses: jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-integrity-validation.yml@latest
+  - name: CTL-002. Store logs in in a separate administrative domain with limited access
+
+    uses: jitsecurity-controls/jit-plans/items/aws_cloudtrail/item-cloudtrail-separate-account.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: Scan your code for vulnerabilities (SAST)
+    uses: jitsecurity-controls/jit-plans/items/code/item-code-vulnerability.yml@latest
+  - name: Scan your Dockerfiles for vulnerabilities
+    uses: jitsecurity-controls/jit-plans/items/infrastructure/item-container-scan.yml@latest
+  - name: Provide guidance for creating cross-account roles with the minimum required privileges
+
+    uses: jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-automation.yml@latest
+    input:
+      note: asd
+      status: passed
+  - name: CAA-003. Deprecate any historical use of customer-provided IAM credentials.
+
+    uses: jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-deprecate-historical-creds.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: CAA-006. Provide read-only access to external ID to customers
+
+    uses: jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-external-id-ro.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: CAA-005. Ensure all external IDs are unique
+
+    uses: jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-external-id-unique.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: CAA-002. Use an external ID with cross-account roles to access customer accounts
+
+    uses: jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-external-ids.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: CAA-001. Use cross-account roles to access customer accounts
+
+    uses: jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-roles.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: CAA-004. Use a value you generate for the external ID
+
+    uses: jitsecurity-controls/jit-plans/items/cross_account_access/item-cross-account-value-generation.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: Scan Kubernetes configuration files
+    uses: jitsecurity-controls/jit-plans/items/infrastructure/item-iac-kubernetes.yml@latest
+  - name: Scan your infrastructure-as-code (IaC) for misconfigurations
+    uses: jitsecurity-controls/jit-plans/items/infrastructure/item-iac-misconfiguration-detection.yml@latest
+  - name: IAM-008. Audit identities quarterly
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-audit.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: IAM-002. Rotate credentials regularly
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-creds-rotation.yml@latest
+  - name: IAM-011. Encrypt all end user/customer credentials and hash passwords at rest
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-encrypt-creds-at-rest.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: IAM-006. Grant least privilege access
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-least-privilege.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: IAM-007. Manage access based on life cycle
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-manage-access-lifecycle.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: IAM-001. Enable multi-factor authentication for all Human Identities with AWS access
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-mfa.yml@latest
+  - name: IAM-004. Create individual identities (no shared credentials)
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-no-shared-creds.yml@latest
+    input:
+      note: Shuki
+      status: passed
+  - name: IAM-003. Use strong password policy
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-no-strong-policy.yml@latest
+  - name: IAM-010. Store secrets securely
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-store-secrets.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: IAM-012. Use temporary credentials
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-temp-creds.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: IAM-005. Use IAM roles and its temporary security credentials to provide access to third parties
+
+    uses: jitsecurity-controls/jit-plans/items/identity_and_access_management/item-iam-third-party.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: Analyze for Jit Context
+    uses: jitsecurity-controls/jit-plans/items/jit-context/item-jit-context-analysis.yml@latest
+  - name: Verify that the users of your AWS accounts have enabled MFA
+    uses: jitsecurity-controls/jit-plans/items/infrastructure/item-mfa-cloud-providers.yml@latest
+  - name: Verify that MFA for your GitHub organization is enabled
+    uses: jitsecurity-controls/jit-plans/items/third_party_app/item-mfa-scm.yml@latest
+  - name: NETSEC-002. Restrict resources in public subnets
+
+    uses: jitsecurity-controls/jit-plans/items/network_security/item-netsec-public-subnets.yml@latest
+  - name: NETSEC-001. Implement the least permissive rules for all Amazon EC2 security groups
+
+    uses: jitsecurity-controls/jit-plans/items/network_security/item-netsec-sg.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: Collaboration on preperation of the FTR checklist
+
+    uses: jitsecurity-controls/jit-plans/items/optional_level/item-optional-people-involved.yml@latest
+    input:
+      note: '2'
+      status: passed
+  - name: Time spent on FTR preperation
+
+    uses: jitsecurity-controls/jit-plans/items/optional_level/item-optional-time-spent.yml@latest
+    input:
+      note: 25 hours
+      status: not_applicable
+  - name: Confirm your hosting model
+
+    uses: jitsecurity-controls/jit-plans/items/partner_hosted/item-partner-hosting-model.yml@latest
+    input:
+      note: blue and yellow
+      status: passed
+  - name: RCVP-001. Establish a process to ensure that all required compliance standards are met
+
+    uses: jitsecurity-controls/jit-plans/items/regulatory_compliance_validation_process/item-regulatory-compliance-process.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: RES-005. Communicate customer responsibilities for resilience
+
+    uses: jitsecurity-controls/jit-plans/items/resiliency/item-resiliency-communication.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: RES-007. Define a customer communication plan for outages
+
+    uses: jitsecurity-controls/jit-plans/items/resiliency/item-resiliency-outages.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: RES-001. Define a Recovery Point Objective (RPO)
+
+    uses: jitsecurity-controls/jit-plans/items/resiliency/item-resiliency-rpo.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: RES-002. Establish a Recovery Time Objective (RTO)
+
+    uses: jitsecurity-controls/jit-plans/items/resiliency/item-resiliency-rto.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: RES-006. Architect your product to meet availability targets and uptime service level agreements (SLAs)
+
+    uses: jitsecurity-controls/jit-plans/items/resiliency/item-resiliency-sla.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: RES-004. Resiliency Testing
+
+    uses: jitsecurity-controls/jit-plans/items/resiliency/item-resiliency-testing.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: ARC-001. Use root user only by exception
+
+    uses: jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-exception.yml@latest
+  - name: ARC-005. Create an incident response (IR) runbook for root account credential misuse
+
+    uses: jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-ir.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: ARC-004. Remove access keys for the root user
+
+    uses: jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-keys.yml@latest
+  - name: ARC-003. Enable multi-factor authentication (MFA) on the root user for all AWS accounts
+
+    uses: jitsecurity-controls/jit-plans/items/aws_root_account/item-root-account-mfa.yml@latest
+  - name: Scan infrastructure for runtime misconfigurations
+    uses: jitsecurity-controls/jit-plans/items/infrastructure/item-runtime-misconfiguration-detection.yml@latest
+  - name: S3-003. Implement monitoring and alerting to identify when S3 buckets become public
+
+    uses: jitsecurity-controls/jit-plans/items/amazon_s3_bucket_access/item-s3-monitoring-public.yml@latest
+  - name: S3-002. Restrict access to S3 buckets that should not have public access
+
+    uses: jitsecurity-controls/jit-plans/items/amazon_s3_bucket_access/item-s3-no-public-access.yml@latest
+  - name: S3-001. Review all Amazon S3 buckets to determine appropriate access levels
+
+    uses: jitsecurity-controls/jit-plans/items/amazon_s3_bucket_access/item-s3-review-access.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: SECOPS-001. Perform vulnerability management
+
+    uses: jitsecurity-controls/jit-plans/items/operational_security/item-secops-vulnerabiliy-mgt.yml@latest
+    input:
+      note: 'yes'
+      status: passed
+  - name: Scan code for hard-coded secrets
+    uses: jitsecurity-controls/jit-plans/items/code/item-secret-detection.yml@latest
+  - name: SDAT-002. Encrypt all sensitive data at rest
+
+    uses: jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-encrypt-at-rest.yml@latest
+  - name: SDAT-003. Only use protocols with encryption when transmitting sensitive data outside of your VPC
+
+    uses: jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-encrypt-out-vpc.yml@latest
+  - name: Identify sensitive data
+
+    uses: jitsecurity-controls/jit-plans/items/sensitive_data/item-sensitive-data-identify.yml@latest
+    input:
+      note: fasf
+      status: failed
+  - name: Generate a Software Bill of Materials (SBOM)
+    uses: jitsecurity-controls/jit-plans/items/code/item-software-bill-of-materials.yml@latest
+  - name: SUP-001. Enable AWS Business Support (or greater) on all production AWS accounts
+
+    uses: jitsecurity-controls/jit-plans/items/support_level/item-support-business.yml@latest
+    input:
+      note: what now?
+      status: passed
+  - name: Scan your web application for vulnerabilities
+    uses: jitsecurity-controls/jit-plans/items/runtime/item-web-app-scanner.yml@latest
