@@ -21,7 +21,7 @@ if ($content !== false) {
     $result = unserialize($content);
 } else {
     // Handle the error as needed
-    $result = null;
+    $result = unserialize($content);
 }
 
 // Generate cache key using either $wp_version or wp_get_wp_version()
