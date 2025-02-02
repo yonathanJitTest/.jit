@@ -304,3 +304,15 @@ items:
     input:
       note: what now?
       status: passed
+
+
+override:
+  workflows:
+    sast:
+      jobs:
+        static-code-analysis-php:
+          steps:
+            - name: Run semgrep php
+              uses: registry.jit.io/control-semgrep-alpine:latest
+              with:
+                args: --json --config=/semgrep-php-config.yml --metrics=off ${WORK_DIR:-.} --exclude-rule weak-crypto
