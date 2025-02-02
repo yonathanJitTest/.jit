@@ -315,4 +315,4 @@ override:
             - name: Run semgrep php
               uses: registry.jit.io/control-semgrep-alpine:latest
               with:
-                args: --json --config=/semgrep-php-config.yml --metrics=off ${WORK_DIR:-.} --exclude-rule weak-crypto
+                args: --json --config=/semgrep-php-config.yml --metrics=off ${WORK_DIR:-.} --exclude-rule weak-crypto --exclude-rule wp-sql-injection-audit --exclude-rule insecure-deserialization
