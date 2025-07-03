@@ -141,6 +141,9 @@ items:
       note: 'yes'
       requirements: null
       status: passed
+  - name: Security Issues Prioritization (DCF-23)
+    uses: >-
+      jitsecurity-controls/jit-plans/items/code/item-drata-security-issues-prioritization.yml@latest
   - name: Scan Kubernetes configuration files
     uses: >-
       jitsecurity-controls/jit-plans/items/infrastructure/item-iac-kubernetes.yml@latest
@@ -377,9 +380,6 @@ items:
       note: fasf
       requirements: null
       status: failed
-  - name: Generate a Software Bill of Materials (SBOM)
-    uses: >-
-      jitsecurity-controls/jit-plans/items/code/item-software-bill-of-materials.yml@latest
   - name: >-
       SUP-001. Enable AWS Business Support (or greater) on all production AWS
       accounts
@@ -389,7 +389,6 @@ items:
       note: what now?
       requirements: null
       status: passed
-  - name: Security Issues Prioritization (DCF-23)
-    uses: >-
-      jitsecurity-controls/jit-plans/items/code/item-drata-security-issues-prioritization.yml@latest
+  - name: Scan your code dependencies for vulnerabilities (SCA)
+    uses: jitsecurity-controls/jit-plans/items/code/item-dependency-check.yml@latest
 
